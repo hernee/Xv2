@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PedidoAlta">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_gravity="right"
+                android:id="@+id/relativeLayout">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search"
+                    android:id="@+id/btnBuscarCliente"
+                    android:layout_gravity="right"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Cliente"
+                    android:id="@+id/lblCliente" />
+
+                <AutoCompleteTextView
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:text="autoCliente"
+                    android:id="@+id/autoCliente"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/lblCliente" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/relativeLayout2">
+
+                <ImageView
+                    android:layout_width="49dp"
+                    android:layout_height="49dp"
+                    android:id="@+id/imgArticulo"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="visible"
+                    android:background="#fdfcfc"
+                    android:layout_toStartOf="@+id/btnBuscarArticulo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Articulo"
+                    android:id="@+id/lblArticulo"
+                    android:layout_alignParentStart="true" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search"
+                    android:id="@+id/btnBuscarArticulo"
+                    android:layout_gravity="right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true" />
+
+                <AutoCompleteTextView
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:text="autoArticulo"
+                    android:id="@+id/autoArticulo"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/lblArticulo" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_alignParentStart="true"
+                android:id="@+id/relativeLayout3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Color"
+                    android:id="@+id/lblColor"
+                    android:layout_alignParentStart="true" />
+
+                <AutoCompleteTextView
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:text="autoColor"
+                    android:id="@+id/autoColor"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/lblColor" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout3"
+                android:layout_alignParentStart="true"
+                android:id="@+id/relativeLayout99">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Material"
+                    android:id="@+id/lblMaterial"
+                    android:layout_alignParentStart="true" />
+
+                <AutoCompleteTextView
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:text="autoMaterial"
+                    android:id="@+id/autoMaterial"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/lblMaterial" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/relativeLayout99"
+                android:layout_alignParentStart="false">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Para"
+                    android:id="@+id/lblTamanos"
+                    android:layout_alignParentStart="true" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/lblTamanos"
+                    android:id="@+id/radioGroup">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hombre"
+                        android:id="@+id/radHombre"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/lblTamanos"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mujer"
+                        android:id="@+id/radMujer"
+                        android:checked="false"
+                        android:layout_below="@+id/radHombre"
+                        android:layout_alignStart="@+id/radHombre" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adolecentes"
+                        android:id="@+id/radAdolecentes"
+                        android:checked="false" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Niño"
+                        android:id="@+id/radNino"
+                        android:checked="false" />
+
+                </RadioGroup>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/radioGroup"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Cantidades"
+                        android:id="@+id/lblCantidades"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lblCantidades">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="XX"
+                                android:id="@+id/lblTalle1"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_column="4"
+                                android:textAlignment="center" />
+
+                            <EditText
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/txtTalle1"
+                                android:text="00"
+                                android:numeric="integer"
+                                android:maxLength="2"
+                                android:layout_column="0"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/textView2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="XX"
+                                android:id="@+id/lblTalle2"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_column="4"
+                                android:textAlignment="center" />
+
+                            <EditText
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/txtTalle2"
+                                android:text="00"
+                                android:numeric="integer"
+                                android:maxLength="2"
+                                android:layout_column="0"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/textView2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="XX"
+                                android:id="@+id/lblTalle3"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_column="4"
+                                android:textAlignment="center" />
+
+                            <EditText
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/txtTalle3"
+                                android:text="00"
+                                android:numeric="integer"
+                                android:maxLength="2"
+                                android:layout_column="0"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/textView2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="XX"
+                                android:id="@+id/lblTalle4"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_column="4"
+                                android:textAlignment="center" />
+
+                            <EditText
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/txtTalle4"
+                                android:text="00"
+                                android:numeric="integer"
+                                android:maxLength="2"
+                                android:layout_column="0"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/textView2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="XX"
+                                android:id="@+id/lblTalle5"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_column="4"
+                                android:textAlignment="center" />
+
+                            <EditText
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/txtTalle5"
+                                android:text="00"
+                                android:numeric="integer"
+                                android:maxLength="2"
+                                android:layout_column="0"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/textView2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="XX"
+                                android:id="@+id/lblTalle6"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_column="4"
+                                android:textAlignment="center" />
+
+                            <EditText
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/txtTalle6"
+                                android:text="00"
+                                android:numeric="integer"
+                                android:maxLength="2"
+                                android:layout_column="0"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/textView2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="XX"
+                                android:id="@+id/lblTalle7"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_column="4"
+                                android:textAlignment="center" />
+
+                            <EditText
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/txtTalle7"
+                                android:text="00"
+                                android:numeric="integer"
+                                android:maxLength="2"
+                                android:layout_column="0"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/textView2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="XX"
+                                android:id="@+id/lblTalle8"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_column="4"
+                                android:textAlignment="center" />
+
+                            <EditText
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/txtTalle8"
+                                android:text="00"
+                                android:numeric="integer"
+                                android:maxLength="2"
+                                android:layout_column="0"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/textView2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="XX"
+                                android:id="@+id/lblTalle9"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_column="4"
+                                android:textAlignment="center" />
+
+                            <EditText
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/txtTalle9"
+                                android:text="00"
+                                android:numeric="integer"
+                                android:maxLength="2"
+                                android:layout_column="0"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/textView2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="XX"
+                                android:id="@+id/lblTalle10"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_column="4"
+                                android:textAlignment="center" />
+
+                            <EditText
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:ems="10"
+                                android:id="@+id/txtTalle10"
+                                android:text="00"
+                                android:numeric="integer"
+                                android:maxLength="2"
+                                android:layout_column="0"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/textView2" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/btnListaClientes"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
