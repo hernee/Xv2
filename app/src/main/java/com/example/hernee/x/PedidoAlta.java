@@ -11,6 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Button;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class PedidoAlta extends ActionBarActivity {
@@ -64,11 +65,9 @@ public class PedidoAlta extends ActionBarActivity {
 
     private void cargarAutocompletar()
     {
-        /*
-        DatabaseAdapter databaseAdapter = new DatabaseAdapter(getApplicationContext());
-        databaseAdapter.open();
-        ArrayList<String> records = databaseAdapter.fetchAllRecords();
-        if (records.size() > 0) {
+       /* List<ObjetoCliente> clientes = new TablaControllerCliente(this).read();
+        if (clientes.size() > 0) {
+
             arr=new String[records.size()];
             for(int i=0;i<records.size();i++)
             {
@@ -83,5 +82,6 @@ public class PedidoAlta extends ActionBarActivity {
         }
         databaseAdapter.close();
         */
+
     }
 }
